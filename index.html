@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Angola Verde – Reporte problemas e oportunidades</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/logo.png" alt="Logo Angola Verde" class="logo" onerror="this.style.display='none'">
+        <h1>🌍 Angola Verde</h1>
+        <p>Reporte lixeiras ilegais, valas poluídas ou locais para plantar árvores em Luanda</p>
+    </header>
+
+    <main>
+        <section class="cards">
+            <div class="card">
+                <h2>📋 Formulário online</h2>
+                <p>Para quem tem internet estável. Envia foto + localização directo.</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOSIaK3jDWXED5zaFYPyjGdwwGl9K_3ev--8BUe6EGvATS_A/viewform" class="btn" target="_blank">Abrir Google Form</a>
+            </div>
+
+            <div class="card">
+                <h2>📱 WhatsApp</h2>
+                <p>Escolhe um dos administradores para enviar a foto, descrição e localização.</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://wa.me/244941186857?text=Olá!%20Quero%20reportar%20um%20local%3A%0A%0A📍%20Localiza%C3%A7%C3%A3o%20(link%20do%20Google%20Maps)%3A%0A📝%20Descri%C3%A7%C3%A3o%3A%0A📸%20(foto%20anexada%20separadamente)" class="btn whatsapp" target="_blank">📲 Enviar para +244 941 186 857</a>
+                    <a href="https://wa.me/244927335892?text=Olá!%20Quero%20reportar%20um%20local%3A%0A%0A📍%20Localiza%C3%A7%C3%A3o%20(link%20do%20Google%20Maps)%3A%0A📝%20Descri%C3%A7%C3%A3o%3A%0A📸%20(foto%20anexada%20separadamente)" class="btn whatsapp" target="_blank">📲 Enviar para +244 927 335 892</a>
+                </div>
+                <button id="btn-localizar" class="btn secundario">📍 Usar minha localização atual</button>
+                <p id="local-msg" style="font-size:0.9rem; margin-top:0.5rem;"></p>
+            </div>
+        </section>
+
+        <section class="mapa-section">
+            <h2>🗺️ Mapa dos locais reportados</h2>
+            <div id="mapa" style="height: 400px; width: 100%; border-radius: 16px;"></div>
+            <p class="nota">*Os pontos aparecerão aqui assim que validarmos os reportes.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌱 Uma iniciativa cidadã para o Dia da Terra (22 de Abril) | #AngolaVerde</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
